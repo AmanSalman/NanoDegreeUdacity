@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>title</title>
+        <link rel="stylesheet" href="./Media.css" />
+    </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: "Open Sans", sans-serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 20% 80%;
+            background-color: tomato;
+            height: 100vh;
+        }
+
+        .child {
+            display: flex;
+            flex-direction: column;
+            padding: 2rem 2rem;
+            background-color: white;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: baseline;
+        }
+
+        .Dashboardsec1, .Dashboardsec2 {
+            margin-bottom: 2rem;
+        }
+
+        .DashTitle {
+            color: #CDD1D7;
+            font-size: 1.2rem;
+            font-family: "Open Sans", sans-serif;
+            text-transform: uppercase;
+        }
+
+        .Dashboardsec2 ul li, .Dashboardsec1 ul li {
+            margin-bottom: 0.4rem;
+            padding: 1rem 2.5rem;
+            border-radius: 10px;
+            width: 100%;
+            /* background-color: rgb(163, 163, 214); */
+            font-size: 1.2rem;
+        }
+
+        .Dashboardsec1 ul li a, .Dashboardsec2 ul li a {
+            color: #3B4554;
+        }
+
+        .content {
+            padding: 2rem 2rem;
+            background-color: rgb(207, 207, 207);
+        }
+
+        /* Styles for small screens (320px to 499px) */
+        @media screen and (min-width: 320px) and (max-width: 520px) {
+            .container {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+
+            .content {
+                background-color: aqua;
+            }
+        }
+
+        /* Styles for medium screens (500px to 884px) */
+        @media screen and (min-width: 521px) and (max-width: 950px) {
+            .container {
+                display: grid;
+                grid-template-columns: 35% auto;
+            }
+        }
+    </style>
+    <body>
+        <div class="container">
+            <div class="child">
+                <div class="Dashboardsec1">
+                    <span class="DashTitle">DASHBOARD</span>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                    </ul>
+                </div>
+                <div class="Dashboardsec2">
+                    <span class="DashTitle">Managment</span>
+                    <ul>
+                        <li><a href="#">Book</a></li>
+                        <ul>
+                            <li><a href="#">Fiction</a></li>
+                            <li><a href="#">Non-Fiction</a></li>
+                            <li><a href="#">Sci-Fi</a></li>
+                        </ul>
+                        <li><a href="#">Order</a></li>
+                        <li><a href="#">Customer</a></li>
+                        <li><a href="#">Category</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                Here the content
+            </div>
+        </div>
+    </body>
+</html>
